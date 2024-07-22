@@ -99,7 +99,7 @@ resource "aws_security_group_rule" "node_cluster" {
   security_group_id = module.node.sg_id
 }
 
-# EKS nodes should accept all traffic from nodes with in VPC CIDR range.
+# EKS nodes should accept all traffic from nodes within VPC CIDR range.
 resource "aws_security_group_rule" "node_vpc" {
   type              = "ingress"
   from_port         = 0
